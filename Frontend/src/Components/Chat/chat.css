@@ -1,0 +1,9 @@
+.chatContainer{
+    padding: 1rem;
+    margin-top: 1rem;
+    display:flex;
+    
+}
+.chat-text{
+    margin-top: 2rem;
+}

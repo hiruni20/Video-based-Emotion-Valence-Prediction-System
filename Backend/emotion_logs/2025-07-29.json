@@ -1,0 +1,17 @@
+{
+    "date": "2025-07-29",
+    "duration_minutes": 0.79,
+    "emotions": {
+        "sad": 53,
+        "fearful": 34,
+        "neutral": 78,
+        "happy": 19,
+        "surprised": 2,
+        "angry": 2
+    },
+    "valence": {
+        "negative": 89,
+        "neutral": 78,
+        "positive": 21
+    }
+}
