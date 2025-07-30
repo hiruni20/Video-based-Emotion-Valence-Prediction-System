@@ -17,7 +17,7 @@ function Chat() {
   return (
     <Box sx={{ padding: 5}}>
       <Grid container spacing={5}>
-        <Grid item xs={12} md={6}>
+        {/*<Grid item xs={12} md={6}>
           <Paper sx={{ padding: 3 }}>
             <Typography variant="h5">Chat</Typography>
             <Typography>Text or voice chat </Typography>
@@ -33,7 +33,7 @@ function Chat() {
               }}
             ></Box>
           </Paper>
-        </Grid>
+        </Grid>*/}
 
         <Grid item xs={12} md={6}>
           <Paper sx={{ padding: 3, textAlign: 'center' }}>

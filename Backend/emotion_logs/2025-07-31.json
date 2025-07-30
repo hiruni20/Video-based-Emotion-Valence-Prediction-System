@@ -1,0 +1,16 @@
+{
+    "date": "2025-07-31",
+    "duration_minutes": 1.01,
+    "emotions": {
+        "sad": 76,
+        "surprised": 17,
+        "fearful": 21,
+        "neutral": 173,
+        "happy": 9
+    },
+    "valence": {
+        "negative": 97,
+        "positive": 26,
+        "neutral": 173
+    }
+}

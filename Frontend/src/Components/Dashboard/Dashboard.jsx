@@ -69,7 +69,7 @@ function Dashboard() {
           <Grid item xs={12} sm={6}>
             <Paper elevation={3} style={{ padding: '1rem' }}>
               <Typography variant="h6" gutterBottom>
-                Emotions Breakdown
+                Emotions Breakdown (%)
               </Typography>
               <Box sx={{ overflowX: 'auto' }}>
                 <Box sx={{ width: 700 }}>
@@ -90,7 +90,7 @@ function Dashboard() {
           <Grid item xs={12} sm={6}>
             <Paper elevation={3} style={{ padding: '1rem' }}>
               <Typography variant="h6" gutterBottom>
-                Valence Summary
+                Valence Summary (%)
               </Typography>
               <Box sx={{ overflowX: 'auto' }}>
                 <Box sx={{ width: 300 }}>
@@ -112,7 +112,8 @@ function Dashboard() {
 
       <Box padding={4}>
         <Typography variant="h5" gutterBottom>
-          Weekly Analysis (Last 7 Days)
+          Weekly Analysis (Last 7 Days)<br/>
+          (%)
         </Typography>
         <ResponsiveContainer width="100%" height={300}>
   <LineChart data={weeklyValenceData}>

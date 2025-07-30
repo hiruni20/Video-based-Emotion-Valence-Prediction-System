@@ -133,11 +133,19 @@ def video_feed():
 @app.route('/today-summary')
 def today_summary():
     today = datetime.date.today().isoformat()
+
+    total_emotions = sum(emotion_counter.values()) or 1  # avoid division by 0
+    total_valence = sum(valence_counter.values()) or 1
+
+    emotion_percent = {k: round((v / total_emotions) * 100, 2) for k, v in emotion_counter.items()}
+    valence_percent = {k: round((v / total_valence) * 100, 2) for k, v in valence_counter.items()}
+
     return jsonify({
         "date": today,
-        "emotions": dict(emotion_counter),
-        "valence": dict(valence_counter)
+        "emotions": emotion_percent,
+        "valence": valence_percent
     })
+
 @app.route('/weekly-valence')
 def weekly_valence():
     log_dir = "emotion_logs"
@@ -152,31 +160,31 @@ def weekly_valence():
             except ValueError:
                 continue
 
-    
     logs.sort()
 
-    # remove days>7 days
     if len(logs) > 7:
         for date, filename in logs[:-7]:
             os.remove(os.path.join(log_dir, filename))
 
-    #  7 day logs
     logs = logs[-7:]
-
     result = []
+
     for date, filename in logs:
         with open(os.path.join(log_dir, filename)) as f:
             log = json.load(f)
 
-        display_date = date.strftime("%d/%m")
+        valence_data = log.get("valence", {})
+        total = sum(valence_data.values()) or 1
+
         result.append({
-            "date": display_date,
-            "Positive": log["valence"].get("positive", 0),
-            "Negative": log["valence"].get("negative", 0),
-            "Neutral": log["valence"].get("neutral", 0)
+            "date": date.strftime("%d/%m"),
+            "Positive": round((valence_data.get("positive", 0) / total) * 100, 2),
+            "Negative": round((valence_data.get("negative", 0) / total) * 100, 2),
+            "Neutral": round((valence_data.get("neutral", 0) / total) * 100, 2),
         })
 
     return jsonify(result)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
