@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import calm3 from '../../assets/calm3.jpg';
+import calm2 from '../../assets/calm2.jpg';
 import {
   LineChart,
   Line,
@@ -49,7 +49,7 @@ function Dashboard() {
       <div
         className="upperContainer"
         style={{
-          backgroundImage: `url(${calm3})`,
+          backgroundImage: `url(${calm2})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: '1rem',
@@ -59,7 +59,8 @@ function Dashboard() {
         <h1>Dashboard</h1>
         <p>Hi Hiruni Nishara, hope you're doing well</p>
       </div>
-
+      <br/>
+        <h2>Facial Expressions</h2>
       <Box padding={4}>
         <Typography variant="h5" gutterBottom>
           Today Your Emotions Summary ({today})
@@ -112,9 +113,11 @@ function Dashboard() {
 
       <Box padding={4}>
         <Typography variant="h5" gutterBottom>
-          Weekly Analysis (Last 7 Days)<br/>
-          (%)
-        </Typography>
+  Weekly Analysis (Last 7 Days)
+</Typography>
+<Typography variant="subtitle2" className="percentage">
+  (%)
+</Typography>
         <ResponsiveContainer width="100%" height={300}>
   <LineChart data={weeklyValenceData}>
     <XAxis dataKey="date" />
