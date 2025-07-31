@@ -13,9 +13,10 @@ const Sidebar = () => {
       <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
         <h2 className="logo"><img src={logo} alt="Logo" />ChatApp</h2>
         <ul className="nav">
-         <li><Link to="/">Dashboard</Link></li>
+         <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/chat">Chat</Link></li>
           <li><Link to="/settings">Settings</Link></li>
+          <li><Link to="/">Home</Link></li>
           
         </ul>
       </div>

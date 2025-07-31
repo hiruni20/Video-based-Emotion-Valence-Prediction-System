@@ -1,0 +1,17 @@
+.mainContainer {
+    margin-left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./../../assets/Calm.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   
+  align-items: center;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #e1dfdf; 
+}

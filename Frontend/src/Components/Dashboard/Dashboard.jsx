@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import calm3 from '../../assets/calm3.jpg';
+import calm2 from '../../assets/calm2.jpg';
 import {
   LineChart,
   Line,
@@ -49,7 +49,7 @@ function Dashboard() {
       <div
         className="upperContainer"
         style={{
-          backgroundImage: `url(${calm3})`,
+          backgroundImage: `url(${calm2})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: '1rem',
