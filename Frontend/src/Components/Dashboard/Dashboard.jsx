@@ -59,7 +59,8 @@ function Dashboard() {
         <h1>Dashboard</h1>
         <p>Hi Hiruni Nishara, hope you're doing well</p>
       </div>
-
+      <br/>
+        <h2>Facial Expressions</h2>
       <Box padding={4}>
         <Typography variant="h5" gutterBottom>
           Today Your Emotions Summary ({today})
@@ -112,9 +113,11 @@ function Dashboard() {
 
       <Box padding={4}>
         <Typography variant="h5" gutterBottom>
-          Weekly Analysis (Last 7 Days)<br/>
-          (%)
-        </Typography>
+  Weekly Analysis (Last 7 Days)
+</Typography>
+<Typography variant="subtitle2" className="percentage">
+  (%)
+</Typography>
         <ResponsiveContainer width="100%" height={300}>
   <LineChart data={weeklyValenceData}>
     <XAxis dataKey="date" />
