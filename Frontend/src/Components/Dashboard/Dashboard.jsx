@@ -132,6 +132,7 @@ function Dashboard() {
   </LineChart>
 </ResponsiveContainer>
       </Box>
+      
     </div>
   );
 }
