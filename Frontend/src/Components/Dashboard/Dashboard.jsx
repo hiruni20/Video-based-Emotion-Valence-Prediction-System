@@ -80,7 +80,7 @@ function Dashboard() {
                       <XAxis dataKey="emotion" />
                       <YAxis />
                       <Tooltip />
-                      <Bar dataKey="value" fill="#82ca9d" />
+                      <Bar dataKey="value" fill="#66b685ff" />
                     </BarChart>
                   </ResponsiveContainer>
                 </Box>
