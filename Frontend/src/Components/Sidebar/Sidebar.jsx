@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <>
       <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-        <h2 className="logo"><img src={logo} alt="Logo" />ChatApp</h2>
+        <h2 className="logo"><img src={logo} alt="Logo" />MindBot</h2>
         <ul className="nav">
          <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/chat">Chat</Link></li>
