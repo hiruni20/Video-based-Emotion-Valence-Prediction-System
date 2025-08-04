@@ -31,12 +31,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block; /* Make sure it's not flex */
+  display: block; 
 }
 
 .nav li {
   display: block;
-  margin-bottom: 10px; /* optional: spacing between items */
+  margin-bottom: 10px; 
 }
 
 

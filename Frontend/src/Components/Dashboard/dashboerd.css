@@ -17,8 +17,8 @@
   width: 100%;
   height: 100%;
   padding-right: 1rem;
-  object-fit: cover; /* crop and fill */
-  display: block; /* remove inline spacing */
+  object-fit: cover; 
+  display: block; 
 }
 .precentage{
   font-size: 1px;

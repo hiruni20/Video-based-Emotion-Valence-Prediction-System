@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Typography } from '@mui/material';
-import './Chat.css'; // Import CSS file
+import './Chat.css'; 
 
 function Chat() {
   const [videoStarted, setVideoStarted] = useState(false);

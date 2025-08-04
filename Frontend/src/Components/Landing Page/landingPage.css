@@ -1,17 +1,65 @@
 .mainContainer {
-    margin-left: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url('./../../assets/Calm.webp'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ;
+  box-sizing: border-box;
+  background-color: #fffbfb; 
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(-80px); 
+}
+
+.img img {
+  width: 100%;
+  max-width:1500px;
+  height: auto;
+  object-fit: cover;
+  
+}
+
+.text {
+  width: 50%;
+  background-color: #fffbfb;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;   
   align-items: center;
-  padding-bottom: 60px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #e1dfdf; 
+  justify-content: center;
+  transform: translateX(-250px); 
+}
+
+.text h3,
+.text p {
+  margin: 0 0 1rem 0;
+}
+.name {
+  color: rgb(86, 175, 170);
+}
+
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .img, .text {
+    width: 90%;
+    transform: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    padding: 1.5rem;
+    align-items: center;
+  }
 }

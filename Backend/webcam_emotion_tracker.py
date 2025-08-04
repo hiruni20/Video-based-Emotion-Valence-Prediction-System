@@ -13,7 +13,7 @@ import time
 app = Flask(__name__)
 CORS(app)  #allow frontend( from http://localhost:5173)
 
-# Load model and face detector
+# Load model and face detector+
 model = tf.keras.models.load_model("emotion_model.h5")
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
@@ -134,7 +134,7 @@ def video_feed():
 def today_summary():
     today = datetime.date.today().isoformat()
 
-    total_emotions = sum(emotion_counter.values()) or 1  # avoid division by 0
+    total_emotions = sum(emotion_counter.values()) or 1 
     total_valence = sum(valence_counter.values()) or 1
 
     emotion_percent = {k: round((v / total_emotions) * 100, 2) for k, v in emotion_counter.items()}
